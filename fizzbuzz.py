@@ -33,6 +33,7 @@ elif len(sys.argv) > 1:
     except ValueError:
         print "Cannot use Letters!"
         check_user_entry = True
+        command_line_arguments = False
         ## loop to ensure a user entry is a an integer after initial error check fails ##        
         while check_user_entry: 
             retry_start = raw_input("Please enter a start number: ")
@@ -44,7 +45,7 @@ elif len(sys.argv) > 1:
             except ValueError:
                 print "Try Again"
     ## code inspects command line arguments or user input ##         
-    if command_line_arguments == True:
+    if command_line_arguments: #== True:
         start = int(sys.argv[1])
         stop = int(sys.argv[2])
     else:
